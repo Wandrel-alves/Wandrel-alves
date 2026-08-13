@@ -1,7 +1,7 @@
 <div align="center">
   
   <h3><code>root@wandrel-alves:~# ./scan_network_activity.sh --target=github</code></h3>
-  <img src="./contrib-heatmap.svg?v=2" width="850" alt="Heatmap de Contribuições" />
+  <img src="./contrib-heatmap.svg?v=3" width="850" alt="Heatmap de Contribuições" />
   
   <br><br>
   
@@ -9,10 +9,10 @@
   <table>
     <tr>
       <td valign="top">
-        <img src="./avi-ascii.svg?v=2" width="410" alt="ASCII Portrait" />
+        <img src="./avi-ascii.svg?v=3" width="410" alt="ASCII Portrait" />
       </td>
       <td valign="top">
-        <img src="./info-card.svg?v=2" width="410" alt="Info Card" />
+        <img src="./info-card.svg?v=3" width="410" alt="Info Card" />
       </td>
     </tr>
   </table>
