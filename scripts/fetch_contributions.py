@@ -3,11 +3,11 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
-# ALTERE PARA O SEU USUÁRIO DO GITHUB
-USERNAME = "AVIVASHISHTA29" 
+# O NOME DO USUÁRIO PRECISA ESTAR ENTRE ASPAS DUPLAS OU SIMPLES " "
+USERNAME = "Wandrel-alves" 
 
 def fetch_data():
-    url = f"https://github.com/users/{Wandrel-alves}/contributions"
+    url = f"https://github.com/users/{USERNAME}/contributions"
     res = requests.get(url)
     if res.status_code != 200:
         raise Exception(f"Erro ao acessar {url}: Status {res.status_code}")
@@ -26,7 +26,7 @@ def fetch_data():
     with open("data/contributions.json", "w", encoding="utf-8") as f:
         json.dump(contrib_data, f, indent=2)
         
-    print(f"Dados salvos ({len(contrib_data)} dias encontrados).")
+    print(f"Dados salvos com sucesso ({len(contrib_data)} dias encontrados).")
 
 if __name__ == "__main__":
     fetch_data()
