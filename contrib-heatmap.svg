@@ -1,382 +1,389 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 170" width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200">
   <style>
-    .bg { fill: #0d1117; rx: 10px; stroke: #30363d; stroke-width: 1px; }
-    .title { font: bold 14px "Fira Code", monospace; fill: #58a6ff; }
-    .sub { font: 11px "Fira Code", monospace; fill: #8b949e; }
-    .radar-line { stroke: #39d353; stroke-width: 1.5px; opacity: 0.4; }
-    .day { rx: 2px; }
-    .day:hover { stroke: #fff; stroke-width: 1px; }
-    @keyframes pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
-    .live-dot { fill: #39d353; animation: pulse 1.5s infinite; }
+    .bg { fill: #0d1117; rx: 12px; stroke: #30363d; stroke-width: 1px; }
+    .day { rx: 3px; transform-origin: center; animation: pulseReveal 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; opacity: 0; }
+    .day:hover { stroke: #fff; stroke-width: 1px; z-index: 10; }
+    @keyframes pulseReveal { 
+        0% { opacity: 0; transform: scale(0) translateY(10px); }
+        50% { opacity: 1; transform: scale(1.3) translateY(-2px); fill: #58a6ff; }
+        100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .text-title { font: bold 15px "Fira Code", monospace; fill: #c9d1d9; animation: fadeIn 1s ease-in forwards; opacity: 0; }
+    .text-sub { font: 12px "Fira Code", monospace; fill: #8b949e; animation: fadeIn 1.5s ease-in forwards; animation-delay: 0.5s; opacity: 0; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }
   </style>
   <rect width="100%" height="100%" class="bg"/>
-  <circle cx="25" cy="25" r="4" class="live-dot"/>
-  <text x="38" y="29" class="title">WANDREL ALVES // CONTRIBUTIONS RADAR</text>
-  <text x="38" y="45" class="sub">Rastreamento de atividade em tempo real • Live Terminal</text>
-  <g transform="translate(25, 60)">
-    <rect class="day" x="0" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.00s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="0" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.02s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="0" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.04s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="0" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.06s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="0" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.08s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="0" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.10s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="0" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.12s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="14" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.03s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="14" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.05s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="14" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.07s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="14" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.09s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="14" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.11s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="14" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.13s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="14" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.15s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="28" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.06s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="28" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.08s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="28" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.10s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="28" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.12s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="28" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.14s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="28" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.16s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="28" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.18s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="42" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.09s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="42" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.11s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="42" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.13s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="42" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.15s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="42" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.17s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="42" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.19s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="42" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.21s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="56" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.12s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="56" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.14s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="56" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.16s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="56" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.18s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="56" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.20s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="56" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.22s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="56" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.24s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="70" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.15s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="70" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.17s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="70" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.19s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="70" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.21s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="70" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.23s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="70" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.25s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="70" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.27s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="84" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.18s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="84" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.20s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="84" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.22s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="84" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.24s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="84" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.26s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="84" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.28s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="84" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.30s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="98" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.21s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="98" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.23s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="98" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.25s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="98" y="42" width="11" height="11" fill="#0e4429">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.27s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="98" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.29s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="98" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.31s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="98" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.33s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="112" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.24s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="112" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.26s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="112" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.28s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="112" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.30s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="112" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.32s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="112" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.34s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="112" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.36s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="126" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.27s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="126" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.29s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="126" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.31s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="126" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.33s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="126" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.35s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="126" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.37s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="126" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.39s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="140" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.30s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="140" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.32s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="140" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.34s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="140" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.36s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="140" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.38s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="140" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.40s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="140" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.42s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="154" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.33s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="154" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.35s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="154" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.37s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="154" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.39s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="154" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.41s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="154" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.43s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="154" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.45s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="168" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.36s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="168" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.38s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="168" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.40s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="168" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.42s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="168" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.44s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="168" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.46s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="168" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.48s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="182" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.39s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="182" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.41s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="182" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.43s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="182" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.45s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="182" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.47s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="182" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.49s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="182" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.51s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="196" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.42s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="196" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.44s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="196" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.46s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="196" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.48s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="196" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.50s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="196" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.52s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="196" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.54s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="210" y="0" width="11" height="11" fill="#39d353">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.45s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="210" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.47s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="210" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.49s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="210" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.51s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="210" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.53s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="210" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.55s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="210" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.57s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="224" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.48s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="224" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.50s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="224" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.52s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="224" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.54s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="224" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.56s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="224" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.58s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="224" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.60s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="238" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.51s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="238" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.53s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="238" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.55s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="238" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.57s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="238" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.59s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="238" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.61s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="238" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.63s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="252" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.54s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="252" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.56s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="252" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.58s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="252" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.60s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="252" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.62s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="252" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.64s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="252" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.66s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="266" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.57s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="266" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.59s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="266" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.61s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="266" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.63s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="266" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.65s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="266" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.67s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="266" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.69s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="280" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.60s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="280" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.62s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="280" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.64s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="280" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.66s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="280" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.68s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="280" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.70s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="280" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.72s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="294" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.63s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="294" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.65s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="294" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.67s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="294" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.69s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="294" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.71s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="294" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.73s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="294" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.75s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="308" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.66s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="308" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.68s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="308" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.70s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="308" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.72s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="308" y="56" width="11" height="11" fill="#0e4429">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.74s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="308" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.76s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="308" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.78s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="322" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.69s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="322" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.71s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="322" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.73s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="322" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.75s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="322" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.77s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="322" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.79s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="322" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.81s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="336" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.72s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="336" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.74s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="336" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.76s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="336" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.78s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="336" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.80s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="336" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.82s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="336" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.84s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="350" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.75s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="350" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.77s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="350" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.79s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="350" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.81s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="350" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.83s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="350" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.85s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="350" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.87s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="364" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.78s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="364" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.80s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="364" y="28" width="11" height="11" fill="#26a641">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.82s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="364" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.84s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="364" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.86s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="364" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.88s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="364" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.90s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="378" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.81s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="378" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.83s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="378" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.85s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="378" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.87s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="378" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.89s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="378" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.91s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="378" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.93s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="392" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.84s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="392" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.86s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="392" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.88s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="392" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.90s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="392" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.92s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="392" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.94s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="392" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.96s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="406" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.87s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="406" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.89s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="406" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.91s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="406" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.93s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="406" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.95s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="406" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.97s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="406" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.99s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="420" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.90s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="420" y="14" width="11" height="11" fill="#0e4429">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.92s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="420" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.94s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="420" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.96s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="420" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.98s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="420" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.00s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="420" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.02s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="434" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.93s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="434" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.95s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="434" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.97s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="434" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.99s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="434" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.01s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="434" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.03s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="434" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.05s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="448" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.96s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="448" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.98s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="448" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.00s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="448" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.02s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="448" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.04s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="448" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.06s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="448" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.08s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="462" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="0.99s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="462" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.01s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="462" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.03s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="462" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.05s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="462" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.07s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="462" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.09s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="462" y="84" width="11" height="11" fill="#26a641">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.11s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="476" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.02s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="476" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.04s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="476" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.06s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="476" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.08s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="476" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.10s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="476" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.12s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="476" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.14s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="490" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.05s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="490" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.07s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="490" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.09s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="490" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.11s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="490" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.13s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="490" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.15s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="490" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.17s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="504" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.08s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="504" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.10s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="504" y="28" width="11" height="11" fill="#0e4429">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.12s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="504" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.14s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="504" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.16s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="504" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.18s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="504" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.20s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="518" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.11s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="518" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.13s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="518" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.15s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="518" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.17s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="518" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.19s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="518" y="70" width="11" height="11" fill="#0e4429">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.21s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="518" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.23s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="532" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.14s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="532" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.16s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="532" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.18s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="532" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.20s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="532" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.22s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="532" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.24s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="532" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.26s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="546" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.17s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="546" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.19s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="546" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.21s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="546" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.23s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="546" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.25s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="546" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.27s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="546" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.29s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="560" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.20s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="560" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.22s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="560" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.24s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="560" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.26s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="560" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.28s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="560" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.30s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="560" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.32s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="574" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.23s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="574" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.25s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="574" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.27s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="574" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.29s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="574" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.31s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="574" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.33s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="574" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.35s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="588" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.26s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="588" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.28s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="588" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.30s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="588" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.32s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="588" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.34s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="588" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.36s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="588" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.38s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="602" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.29s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="602" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.31s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="602" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.33s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="602" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.35s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="602" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.37s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="602" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.39s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="602" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.41s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="616" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.32s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="616" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.34s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="616" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.36s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="616" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.38s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="616" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.40s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="616" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.42s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="616" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.44s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="630" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.35s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="630" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.37s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="630" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.39s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="630" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.41s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="630" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.43s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="630" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.45s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="630" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.47s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="644" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.38s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="644" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.40s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="644" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.42s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="644" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.44s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="644" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.46s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="644" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.48s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="644" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.50s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="658" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.41s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="658" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.43s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="658" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.45s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="658" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.47s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="658" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.49s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="658" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.51s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="658" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.53s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="672" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.44s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="672" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.46s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="672" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.48s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="672" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.50s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="672" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.52s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="672" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.54s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="672" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.56s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="686" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.47s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="686" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.49s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="686" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.51s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="686" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.53s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="686" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.55s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="686" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.57s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="686" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.59s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="700" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.50s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="700" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.52s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="700" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.54s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="700" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.56s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="700" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.58s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="700" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.60s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="700" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.62s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="714" y="0" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.53s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="714" y="14" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.55s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="714" y="28" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.57s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="714" y="42" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.59s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="714" y="56" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.61s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="714" y="70" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.63s" repeatCount="indefinite"/>    </rect>
-    <rect class="day" x="714" y="84" width="11" height="11" fill="#161b22">      <animate attributeName="opacity" values="0.2;1;0.8" dur="3s" begin="1.65s" repeatCount="indefinite"/>    </rect>
+  <text x="30" y="30" class="text-title">>_ ACTIVITY RADAR // WANDREL ALVES</text>
+  <text x="30" y="50" class="text-sub">Inicializando rastreamento de contribuições em tempo real...</text>
+  <g transform="translate(30, 75)">
+    <rect class="day" x="0" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 0.500s;" />
+    <rect class="day" x="0" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 0.550s;" />
+    <rect class="day" x="0" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 0.600s;" />
+    <rect class="day" x="0" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 0.650s;" />
+    <rect class="day" x="0" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 0.700s;" />
+    <rect class="day" x="0" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 0.750s;" />
+    <rect class="day" x="0" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 0.800s;" />
+    <rect class="day" x="16" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 0.535s;" />
+    <rect class="day" x="16" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 0.585s;" />
+    <rect class="day" x="16" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 0.635s;" />
+    <rect class="day" x="16" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 0.685s;" />
+    <rect class="day" x="16" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 0.735s;" />
+    <rect class="day" x="16" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 0.785s;" />
+    <rect class="day" x="16" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 0.835s;" />
+    <rect class="day" x="32" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 0.570s;" />
+    <rect class="day" x="32" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 0.620s;" />
+    <rect class="day" x="32" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 0.670s;" />
+    <rect class="day" x="32" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 0.720s;" />
+    <rect class="day" x="32" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 0.770s;" />
+    <rect class="day" x="32" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 0.820s;" />
+    <rect class="day" x="32" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 0.870s;" />
+    <rect class="day" x="48" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 0.605s;" />
+    <rect class="day" x="48" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 0.655s;" />
+    <rect class="day" x="48" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 0.705s;" />
+    <rect class="day" x="48" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 0.755s;" />
+    <rect class="day" x="48" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 0.805s;" />
+    <rect class="day" x="48" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 0.855s;" />
+    <rect class="day" x="48" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 0.905s;" />
+    <rect class="day" x="64" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 0.640s;" />
+    <rect class="day" x="64" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 0.690s;" />
+    <rect class="day" x="64" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 0.740s;" />
+    <rect class="day" x="64" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 0.790s;" />
+    <rect class="day" x="64" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 0.840s;" />
+    <rect class="day" x="64" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 0.890s;" />
+    <rect class="day" x="64" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 0.940s;" />
+    <rect class="day" x="80" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 0.675s;" />
+    <rect class="day" x="80" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 0.725s;" />
+    <rect class="day" x="80" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 0.775s;" />
+    <rect class="day" x="80" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 0.825s;" />
+    <rect class="day" x="80" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 0.875s;" />
+    <rect class="day" x="80" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 0.925s;" />
+    <rect class="day" x="80" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 0.975s;" />
+    <rect class="day" x="96" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 0.710s;" />
+    <rect class="day" x="96" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 0.760s;" />
+    <rect class="day" x="96" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 0.810s;" />
+    <rect class="day" x="96" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 0.860s;" />
+    <rect class="day" x="96" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 0.910s;" />
+    <rect class="day" x="96" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 0.960s;" />
+    <rect class="day" x="96" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.010s;" />
+    <rect class="day" x="112" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 0.745s;" />
+    <rect class="day" x="112" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 0.795s;" />
+    <rect class="day" x="112" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 0.845s;" />
+    <rect class="day" x="112" y="48" width="12" height="12" fill="#0e4429" style="animation-delay: 0.895s;" />
+    <rect class="day" x="112" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 0.945s;" />
+    <rect class="day" x="112" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 0.995s;" />
+    <rect class="day" x="112" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.045s;" />
+    <rect class="day" x="128" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 0.780s;" />
+    <rect class="day" x="128" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 0.830s;" />
+    <rect class="day" x="128" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 0.880s;" />
+    <rect class="day" x="128" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 0.930s;" />
+    <rect class="day" x="128" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 0.980s;" />
+    <rect class="day" x="128" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.030s;" />
+    <rect class="day" x="128" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.080s;" />
+    <rect class="day" x="144" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 0.815s;" />
+    <rect class="day" x="144" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 0.865s;" />
+    <rect class="day" x="144" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 0.915s;" />
+    <rect class="day" x="144" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 0.965s;" />
+    <rect class="day" x="144" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.015s;" />
+    <rect class="day" x="144" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.065s;" />
+    <rect class="day" x="144" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.115s;" />
+    <rect class="day" x="160" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 0.850s;" />
+    <rect class="day" x="160" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 0.900s;" />
+    <rect class="day" x="160" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 0.950s;" />
+    <rect class="day" x="160" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.000s;" />
+    <rect class="day" x="160" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.050s;" />
+    <rect class="day" x="160" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.100s;" />
+    <rect class="day" x="160" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.150s;" />
+    <rect class="day" x="176" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 0.885s;" />
+    <rect class="day" x="176" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 0.935s;" />
+    <rect class="day" x="176" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 0.985s;" />
+    <rect class="day" x="176" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.035s;" />
+    <rect class="day" x="176" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.085s;" />
+    <rect class="day" x="176" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.135s;" />
+    <rect class="day" x="176" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.185s;" />
+    <rect class="day" x="192" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 0.920s;" />
+    <rect class="day" x="192" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 0.970s;" />
+    <rect class="day" x="192" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.020s;" />
+    <rect class="day" x="192" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.070s;" />
+    <rect class="day" x="192" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.120s;" />
+    <rect class="day" x="192" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.170s;" />
+    <rect class="day" x="192" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.220s;" />
+    <rect class="day" x="208" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 0.955s;" />
+    <rect class="day" x="208" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.005s;" />
+    <rect class="day" x="208" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.055s;" />
+    <rect class="day" x="208" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.105s;" />
+    <rect class="day" x="208" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.155s;" />
+    <rect class="day" x="208" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.205s;" />
+    <rect class="day" x="208" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.255s;" />
+    <rect class="day" x="224" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 0.990s;" />
+    <rect class="day" x="224" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.040s;" />
+    <rect class="day" x="224" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.090s;" />
+    <rect class="day" x="224" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.140s;" />
+    <rect class="day" x="224" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.190s;" />
+    <rect class="day" x="224" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.240s;" />
+    <rect class="day" x="224" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.290s;" />
+    <rect class="day" x="240" y="0" width="12" height="12" fill="#39d353" style="animation-delay: 1.025s;" />
+    <rect class="day" x="240" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.075s;" />
+    <rect class="day" x="240" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.125s;" />
+    <rect class="day" x="240" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.175s;" />
+    <rect class="day" x="240" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.225s;" />
+    <rect class="day" x="240" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.275s;" />
+    <rect class="day" x="240" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.325s;" />
+    <rect class="day" x="256" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.060s;" />
+    <rect class="day" x="256" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.110s;" />
+    <rect class="day" x="256" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.160s;" />
+    <rect class="day" x="256" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.210s;" />
+    <rect class="day" x="256" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.260s;" />
+    <rect class="day" x="256" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.310s;" />
+    <rect class="day" x="256" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.360s;" />
+    <rect class="day" x="272" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.095s;" />
+    <rect class="day" x="272" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.145s;" />
+    <rect class="day" x="272" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.195s;" />
+    <rect class="day" x="272" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.245s;" />
+    <rect class="day" x="272" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.295s;" />
+    <rect class="day" x="272" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.345s;" />
+    <rect class="day" x="272" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.395s;" />
+    <rect class="day" x="288" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.130s;" />
+    <rect class="day" x="288" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.180s;" />
+    <rect class="day" x="288" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.230s;" />
+    <rect class="day" x="288" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.280s;" />
+    <rect class="day" x="288" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.330s;" />
+    <rect class="day" x="288" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.380s;" />
+    <rect class="day" x="288" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.430s;" />
+    <rect class="day" x="304" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.165s;" />
+    <rect class="day" x="304" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.215s;" />
+    <rect class="day" x="304" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.265s;" />
+    <rect class="day" x="304" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.315s;" />
+    <rect class="day" x="304" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.365s;" />
+    <rect class="day" x="304" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.415s;" />
+    <rect class="day" x="304" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.465s;" />
+    <rect class="day" x="320" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.200s;" />
+    <rect class="day" x="320" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.250s;" />
+    <rect class="day" x="320" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.300s;" />
+    <rect class="day" x="320" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.350s;" />
+    <rect class="day" x="320" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.400s;" />
+    <rect class="day" x="320" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.450s;" />
+    <rect class="day" x="320" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.500s;" />
+    <rect class="day" x="336" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.235s;" />
+    <rect class="day" x="336" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.285s;" />
+    <rect class="day" x="336" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.335s;" />
+    <rect class="day" x="336" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.385s;" />
+    <rect class="day" x="336" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.435s;" />
+    <rect class="day" x="336" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.485s;" />
+    <rect class="day" x="336" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.535s;" />
+    <rect class="day" x="352" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.270s;" />
+    <rect class="day" x="352" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.320s;" />
+    <rect class="day" x="352" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.370s;" />
+    <rect class="day" x="352" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.420s;" />
+    <rect class="day" x="352" y="64" width="12" height="12" fill="#0e4429" style="animation-delay: 1.470s;" />
+    <rect class="day" x="352" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.520s;" />
+    <rect class="day" x="352" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.570s;" />
+    <rect class="day" x="368" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.305s;" />
+    <rect class="day" x="368" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.355s;" />
+    <rect class="day" x="368" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.405s;" />
+    <rect class="day" x="368" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.455s;" />
+    <rect class="day" x="368" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.505s;" />
+    <rect class="day" x="368" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.555s;" />
+    <rect class="day" x="368" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.605s;" />
+    <rect class="day" x="384" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.340s;" />
+    <rect class="day" x="384" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.390s;" />
+    <rect class="day" x="384" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.440s;" />
+    <rect class="day" x="384" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.490s;" />
+    <rect class="day" x="384" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.540s;" />
+    <rect class="day" x="384" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.590s;" />
+    <rect class="day" x="384" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.640s;" />
+    <rect class="day" x="400" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.375s;" />
+    <rect class="day" x="400" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.425s;" />
+    <rect class="day" x="400" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.475s;" />
+    <rect class="day" x="400" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.525s;" />
+    <rect class="day" x="400" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.575s;" />
+    <rect class="day" x="400" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.625s;" />
+    <rect class="day" x="400" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.675s;" />
+    <rect class="day" x="416" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.410s;" />
+    <rect class="day" x="416" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.460s;" />
+    <rect class="day" x="416" y="32" width="12" height="12" fill="#26a641" style="animation-delay: 1.510s;" />
+    <rect class="day" x="416" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.560s;" />
+    <rect class="day" x="416" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.610s;" />
+    <rect class="day" x="416" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.660s;" />
+    <rect class="day" x="416" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.710s;" />
+    <rect class="day" x="432" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.445s;" />
+    <rect class="day" x="432" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.495s;" />
+    <rect class="day" x="432" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.545s;" />
+    <rect class="day" x="432" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.595s;" />
+    <rect class="day" x="432" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.645s;" />
+    <rect class="day" x="432" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.695s;" />
+    <rect class="day" x="432" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.745s;" />
+    <rect class="day" x="448" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.480s;" />
+    <rect class="day" x="448" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.530s;" />
+    <rect class="day" x="448" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.580s;" />
+    <rect class="day" x="448" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.630s;" />
+    <rect class="day" x="448" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.680s;" />
+    <rect class="day" x="448" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.730s;" />
+    <rect class="day" x="448" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.780s;" />
+    <rect class="day" x="464" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.515s;" />
+    <rect class="day" x="464" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.565s;" />
+    <rect class="day" x="464" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.615s;" />
+    <rect class="day" x="464" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.665s;" />
+    <rect class="day" x="464" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.715s;" />
+    <rect class="day" x="464" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.765s;" />
+    <rect class="day" x="464" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.815s;" />
+    <rect class="day" x="480" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.550s;" />
+    <rect class="day" x="480" y="16" width="12" height="12" fill="#0e4429" style="animation-delay: 1.600s;" />
+    <rect class="day" x="480" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.650s;" />
+    <rect class="day" x="480" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.700s;" />
+    <rect class="day" x="480" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.750s;" />
+    <rect class="day" x="480" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.800s;" />
+    <rect class="day" x="480" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.850s;" />
+    <rect class="day" x="496" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.585s;" />
+    <rect class="day" x="496" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.635s;" />
+    <rect class="day" x="496" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.685s;" />
+    <rect class="day" x="496" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.735s;" />
+    <rect class="day" x="496" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.785s;" />
+    <rect class="day" x="496" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.835s;" />
+    <rect class="day" x="496" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.885s;" />
+    <rect class="day" x="512" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.620s;" />
+    <rect class="day" x="512" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.670s;" />
+    <rect class="day" x="512" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.720s;" />
+    <rect class="day" x="512" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.770s;" />
+    <rect class="day" x="512" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.820s;" />
+    <rect class="day" x="512" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.870s;" />
+    <rect class="day" x="512" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.920s;" />
+    <rect class="day" x="528" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.655s;" />
+    <rect class="day" x="528" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.705s;" />
+    <rect class="day" x="528" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.755s;" />
+    <rect class="day" x="528" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.805s;" />
+    <rect class="day" x="528" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.855s;" />
+    <rect class="day" x="528" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.905s;" />
+    <rect class="day" x="528" y="96" width="12" height="12" fill="#26a641" style="animation-delay: 1.955s;" />
+    <rect class="day" x="544" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.690s;" />
+    <rect class="day" x="544" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.740s;" />
+    <rect class="day" x="544" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.790s;" />
+    <rect class="day" x="544" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.840s;" />
+    <rect class="day" x="544" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.890s;" />
+    <rect class="day" x="544" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.940s;" />
+    <rect class="day" x="544" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.990s;" />
+    <rect class="day" x="560" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.725s;" />
+    <rect class="day" x="560" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.775s;" />
+    <rect class="day" x="560" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.825s;" />
+    <rect class="day" x="560" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.875s;" />
+    <rect class="day" x="560" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.925s;" />
+    <rect class="day" x="560" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.975s;" />
+    <rect class="day" x="560" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.025s;" />
+    <rect class="day" x="576" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.760s;" />
+    <rect class="day" x="576" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.810s;" />
+    <rect class="day" x="576" y="32" width="12" height="12" fill="#0e4429" style="animation-delay: 1.860s;" />
+    <rect class="day" x="576" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.910s;" />
+    <rect class="day" x="576" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.960s;" />
+    <rect class="day" x="576" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.010s;" />
+    <rect class="day" x="576" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.060s;" />
+    <rect class="day" x="592" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.795s;" />
+    <rect class="day" x="592" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.845s;" />
+    <rect class="day" x="592" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.895s;" />
+    <rect class="day" x="592" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.945s;" />
+    <rect class="day" x="592" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.995s;" />
+    <rect class="day" x="592" y="80" width="12" height="12" fill="#0e4429" style="animation-delay: 2.045s;" />
+    <rect class="day" x="592" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.095s;" />
+    <rect class="day" x="608" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.830s;" />
+    <rect class="day" x="608" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.880s;" />
+    <rect class="day" x="608" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.930s;" />
+    <rect class="day" x="608" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.980s;" />
+    <rect class="day" x="608" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.030s;" />
+    <rect class="day" x="608" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.080s;" />
+    <rect class="day" x="608" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.130s;" />
+    <rect class="day" x="624" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.865s;" />
+    <rect class="day" x="624" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.915s;" />
+    <rect class="day" x="624" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.965s;" />
+    <rect class="day" x="624" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 2.015s;" />
+    <rect class="day" x="624" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.065s;" />
+    <rect class="day" x="624" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.115s;" />
+    <rect class="day" x="624" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.165s;" />
+    <rect class="day" x="640" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.900s;" />
+    <rect class="day" x="640" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.950s;" />
+    <rect class="day" x="640" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 2.000s;" />
+    <rect class="day" x="640" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 2.050s;" />
+    <rect class="day" x="640" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.100s;" />
+    <rect class="day" x="640" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.150s;" />
+    <rect class="day" x="640" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.200s;" />
+    <rect class="day" x="656" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.935s;" />
+    <rect class="day" x="656" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.985s;" />
+    <rect class="day" x="656" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 2.035s;" />
+    <rect class="day" x="656" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 2.085s;" />
+    <rect class="day" x="656" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.135s;" />
+    <rect class="day" x="656" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.185s;" />
+    <rect class="day" x="656" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.235s;" />
+    <rect class="day" x="672" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.970s;" />
+    <rect class="day" x="672" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 2.020s;" />
+    <rect class="day" x="672" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 2.070s;" />
+    <rect class="day" x="672" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 2.120s;" />
+    <rect class="day" x="672" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.170s;" />
+    <rect class="day" x="672" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.220s;" />
+    <rect class="day" x="672" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.270s;" />
+    <rect class="day" x="688" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 2.005s;" />
+    <rect class="day" x="688" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 2.055s;" />
+    <rect class="day" x="688" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 2.105s;" />
+    <rect class="day" x="688" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 2.155s;" />
+    <rect class="day" x="688" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.205s;" />
+    <rect class="day" x="688" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.255s;" />
+    <rect class="day" x="688" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.305s;" />
+    <rect class="day" x="704" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 2.040s;" />
+    <rect class="day" x="704" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 2.090s;" />
+    <rect class="day" x="704" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 2.140s;" />
+    <rect class="day" x="704" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 2.190s;" />
+    <rect class="day" x="704" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.240s;" />
+    <rect class="day" x="704" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.290s;" />
+    <rect class="day" x="704" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.340s;" />
+    <rect class="day" x="720" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 2.075s;" />
+    <rect class="day" x="720" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 2.125s;" />
+    <rect class="day" x="720" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 2.175s;" />
+    <rect class="day" x="720" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 2.225s;" />
+    <rect class="day" x="720" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.275s;" />
+    <rect class="day" x="720" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.325s;" />
+    <rect class="day" x="720" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.375s;" />
+    <rect class="day" x="736" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 2.110s;" />
+    <rect class="day" x="736" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 2.160s;" />
+    <rect class="day" x="736" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 2.210s;" />
+    <rect class="day" x="736" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 2.260s;" />
+    <rect class="day" x="736" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.310s;" />
+    <rect class="day" x="736" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.360s;" />
+    <rect class="day" x="736" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.410s;" />
+    <rect class="day" x="752" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 2.145s;" />
+    <rect class="day" x="752" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 2.195s;" />
+    <rect class="day" x="752" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 2.245s;" />
+    <rect class="day" x="752" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 2.295s;" />
+    <rect class="day" x="752" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.345s;" />
+    <rect class="day" x="752" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.395s;" />
+    <rect class="day" x="752" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.445s;" />
+    <rect class="day" x="768" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 2.180s;" />
+    <rect class="day" x="768" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 2.230s;" />
+    <rect class="day" x="768" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 2.280s;" />
+    <rect class="day" x="768" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 2.330s;" />
+    <rect class="day" x="768" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.380s;" />
+    <rect class="day" x="768" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.430s;" />
+    <rect class="day" x="768" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.480s;" />
+    <rect class="day" x="784" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 2.215s;" />
+    <rect class="day" x="784" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 2.265s;" />
+    <rect class="day" x="784" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 2.315s;" />
+    <rect class="day" x="784" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 2.365s;" />
+    <rect class="day" x="784" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.415s;" />
+    <rect class="day" x="784" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.465s;" />
+    <rect class="day" x="784" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.515s;" />
+    <rect class="day" x="800" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 2.250s;" />
+    <rect class="day" x="800" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 2.300s;" />
+    <rect class="day" x="800" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 2.350s;" />
+    <rect class="day" x="800" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 2.400s;" />
+    <rect class="day" x="800" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.450s;" />
+    <rect class="day" x="800" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.500s;" />
+    <rect class="day" x="800" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.550s;" />
+    <rect class="day" x="816" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 2.285s;" />
+    <rect class="day" x="816" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 2.335s;" />
+    <rect class="day" x="816" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 2.385s;" />
+    <rect class="day" x="816" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 2.435s;" />
+    <rect class="day" x="816" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.485s;" />
+    <rect class="day" x="816" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.535s;" />
+    <rect class="day" x="816" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.585s;" />
+    <rect class="day" x="832" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 2.320s;" />
+    <rect class="day" x="832" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 2.370s;" />
+    <rect class="day" x="832" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 2.420s;" />
+    <rect class="day" x="832" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 2.470s;" />
+    <rect class="day" x="832" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.520s;" />
   </g>
 </svg>
