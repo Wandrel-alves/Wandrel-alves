@@ -1,11 +1,11 @@
 <div align="center">
   
-  <h3><code>Wandrel-alves@github ~ $ ./contributions.sh</code></h3>
+  <h3><code>root@wandrel-alves:~# ./scan_network_activity.sh --target=github</code></h3>
   <img src="./contrib-heatmap.svg?v=2" width="850" alt="Heatmap de Contribuições" />
   
   <br><br>
   
-  <h3><code>Wandrel-alves@github ~ $ whoami</code></h3>
+  <h3><code>guest@github-matrix:~$ bash bypass_security_and_fetch_profile.sh</code></h3>
   <table>
     <tr>
       <td valign="top">
