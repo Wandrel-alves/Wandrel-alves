@@ -1,50 +1,42 @@
-import sys
+import os
 
-def create_info_card(output_path="info-card.svg"):
-    svg_content = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 350" width="490" height="350">
+def create_info_card():
+    svg_content = """<svg xmlns="http://www.w3.org/2000/svg" width="490" height="220" viewBox="0 0 490 220">
   <style>
-    .bg { fill: #0d1117; rx: 6px; }
-    .title { font: bold 14px monospace; fill: #58a6ff; }
-    .label { font: bold 12px monospace; fill: #79c0ff; }
-    .value { font: 12px monospace; fill: #c9d1d9; }
-    .fade { animation: fadeIn 0.5s ease-in forwards; opacity: 0; }
-    @keyframes fadeIn { to { opacity: 1; } }
+    .bg { fill: #0d1117; rx: 10px; ry: 10px; stroke: #30363d; stroke-width: 1px; }
+    .text { font-family: 'Fira Code', 'Courier New', monospace; font-size: 13px; }
+    .title { fill: #58a6ff; font-weight: bold; }
+    .prompt { fill: #7ee787; font-weight: bold; }
+    .label { fill: #8b949e; }
+    .val { fill: #c9d1d9; }
+    .highlight { fill: #ffa657; }
   </style>
-  <rect width="100%" height="100%" class="bg"/>
-  
-  <g transform="translate(20, 30)">
-    <text y="0" class="title fade" style="animation-delay: 0.1s;">user@github-workspace</text>
-    <text y="12" class="value fade" style="animation-delay: 0.2s;">-----------------------</text>
-    
-    <g transform="translate(0, 40)" class="fade" style="animation-delay: 0.3s;">
-      <text class="label">OS:</text><text x="90" class="value">GitHub Profile Terminal v2.0</text>
-    </g>
-    <g transform="translate(0, 65)" class="fade" style="animation-delay: 0.4s;">
-      <text class="label">Role:</text><text x="90" class="value">Software Engineer / Creator</text>
-    </g>
-    <g transform="translate(0, 90)" class="fade" style="animation-delay: 0.5s;">
-      <text class="label">Stack:</text><text x="90" class="value">Python, JavaScript, Docker, Git</text>
-    </g>
-    <g transform="translate(0, 115)" class="fade" style="animation-delay: 0.6s;">
-      <text class="label">Now:</text><text x="90" class="value">Construindo autômatos e SVGs</text>
-    </g>
-    <g transform="translate(0, 140)" class="fade" style="animation-delay: 0.7s;">
-      <text class="label">Highlights:</text><text x="90" class="value">Automações sem servidor &amp; CI/CD</text>
-    </g>
 
-    <g transform="translate(0, 180)" class="fade" style="animation-delay: 0.8s;">
-      <rect x="0" width="20" height="15" fill="#ff7b72"/>
-      <rect x="25" width="20" height="15" fill="#ffa657"/>
-      <rect x="50" width="20" height="15" fill="#d2a8ff"/>
-      <rect x="75" width="20" height="15" fill="#79c0ff"/>
-      <rect x="100" width="20" height="15" fill="#56d364"/>
-    </g>
-  </g>
+  <rect width="100%" height="100%" class="bg" />
+
+  <text x="20" y="30" class="text prompt">Wandrel-alves@github <tspan fill="#8b949e">~ $</tspan> <tspan class="title">neofetch</tspan></text>
+  <line x1="20" y1="42" x2="470" y2="42" stroke="#21262d" stroke-width="1" />
+
+  <text x="20" y="65" class="text label">OS: <tspan class="val">GitHub Workspace x86_64</tspan></text>
+  <text x="20" y="85" class="text label">Host: <tspan class="val">Olá! Sou o Wandrel Alves 👋</tspan></text>
+  <text x="20" y="105" class="text label">Foco: <tspan class="highlight">Desenvolvimento Web &amp; Python</tspan></text>
+  <text x="20" y="125" class="text label">Status: <tspan class="val">Programando e aprendendo coisas novas ☕</tspan></text>
+  
+  <text x="20" y="155" class="text label">Tech Stack:</text>
+  <text x="20" y="180" class="text">
+    <tspan fill="#4584b6">● Python</tspan>  
+    <tspan fill="#e34c26">● HTML5</tspan>  
+    <tspan fill="#264de4">● CSS3</tspan>  
+    <tspan fill="#f0db4f">● JavaScript</tspan>  
+    <tspan fill="#f14e32">● Git</tspan>
+  </text>
+  
+  <text x="20" y="202" class="text prompt">Wandrel-alves@github <tspan fill="#8b949e">~ $</tspan> <tspan fill="#7ee787">_</tspan></text>
 </svg>"""
 
-    with open(output_path, "w", encoding="utf-8") as f:
+    with open("info-card.svg", "w", encoding="utf-8") as f:
         f.write(svg_content)
-    print(f"Card gerado em: {output_path}")
+    print("Card gerado em: info-card.svg")
 
 if __name__ == "__main__":
     create_info_card()
