@@ -68,7 +68,7 @@
     <rect class="day" x="112" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 0.745s;" />
     <rect class="day" x="112" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 0.795s;" />
     <rect class="day" x="112" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 0.845s;" />
-    <rect class="day" x="112" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 0.895s;" />
+    <rect class="day" x="112" y="48" width="12" height="12" fill="#0e4429" style="animation-delay: 0.895s;" />
     <rect class="day" x="112" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 0.945s;" />
     <rect class="day" x="112" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 0.995s;" />
     <rect class="day" x="112" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.045s;" />
@@ -197,8 +197,8 @@
     <rect class="day" x="400" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.525s;" />
     <rect class="day" x="400" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.575s;" />
     <rect class="day" x="400" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.625s;" />
-    <rect class="day" x="400" y="96" width="12" height="12" fill="#26a641" style="animation-delay: 1.675s;" />
-    <rect class="day" x="416" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.410s;" />
+    <rect class="day" x="400" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.675s;" />
+    <rect class="day" x="416" y="0" width="12" height="12" fill="#26a641" style="animation-delay: 1.410s;" />
     <rect class="day" x="416" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.460s;" />
     <rect class="day" x="416" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.510s;" />
     <rect class="day" x="416" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.560s;" />
@@ -249,8 +249,8 @@
     <rect class="day" x="512" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.920s;" />
     <rect class="day" x="528" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.655s;" />
     <rect class="day" x="528" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.705s;" />
-    <rect class="day" x="528" y="32" width="12" height="12" fill="#26a641" style="animation-delay: 1.755s;" />
-    <rect class="day" x="528" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.805s;" />
+    <rect class="day" x="528" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.755s;" />
+    <rect class="day" x="528" y="48" width="12" height="12" fill="#26a641" style="animation-delay: 1.805s;" />
     <rect class="day" x="528" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.855s;" />
     <rect class="day" x="528" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.905s;" />
     <rect class="day" x="528" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 1.955s;" />
@@ -266,8 +266,8 @@
     <rect class="day" x="560" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.825s;" />
     <rect class="day" x="560" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.875s;" />
     <rect class="day" x="560" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.925s;" />
-    <rect class="day" x="560" y="80" width="12" height="12" fill="#0e4429" style="animation-delay: 1.975s;" />
-    <rect class="day" x="560" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.025s;" />
+    <rect class="day" x="560" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 1.975s;" />
+    <rect class="day" x="560" y="96" width="12" height="12" fill="#0e4429" style="animation-delay: 2.025s;" />
     <rect class="day" x="576" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.760s;" />
     <rect class="day" x="576" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.810s;" />
     <rect class="day" x="576" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.860s;" />
@@ -276,8 +276,8 @@
     <rect class="day" x="576" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.010s;" />
     <rect class="day" x="576" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.060s;" />
     <rect class="day" x="592" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 1.795s;" />
-    <rect class="day" x="592" y="16" width="12" height="12" fill="#39d353" style="animation-delay: 1.845s;" />
-    <rect class="day" x="592" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 1.895s;" />
+    <rect class="day" x="592" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 1.845s;" />
+    <rect class="day" x="592" y="32" width="12" height="12" fill="#39d353" style="animation-delay: 1.895s;" />
     <rect class="day" x="592" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 1.945s;" />
     <rect class="day" x="592" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 1.995s;" />
     <rect class="day" x="592" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.045s;" />
@@ -328,8 +328,8 @@
     <rect class="day" x="704" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 2.090s;" />
     <rect class="day" x="704" y="32" width="12" height="12" fill="#161b22" style="animation-delay: 2.140s;" />
     <rect class="day" x="704" y="48" width="12" height="12" fill="#161b22" style="animation-delay: 2.190s;" />
-    <rect class="day" x="704" y="64" width="12" height="12" fill="#0e4429" style="animation-delay: 2.240s;" />
-    <rect class="day" x="704" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.290s;" />
+    <rect class="day" x="704" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.240s;" />
+    <rect class="day" x="704" y="80" width="12" height="12" fill="#0e4429" style="animation-delay: 2.290s;" />
     <rect class="day" x="704" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.340s;" />
     <rect class="day" x="720" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 2.075s;" />
     <rect class="day" x="720" y="16" width="12" height="12" fill="#161b22" style="animation-delay: 2.125s;" />
@@ -380,6 +380,7 @@
     <rect class="day" x="816" y="64" width="12" height="12" fill="#161b22" style="animation-delay: 2.485s;" />
     <rect class="day" x="816" y="80" width="12" height="12" fill="#161b22" style="animation-delay: 2.535s;" />
     <rect class="day" x="816" y="96" width="12" height="12" fill="#161b22" style="animation-delay: 2.585s;" />
-    <rect class="day" x="832" y="0" width="12" height="12" fill="#0e4429" style="animation-delay: 2.320s;" />
+    <rect class="day" x="832" y="0" width="12" height="12" fill="#161b22" style="animation-delay: 2.320s;" />
+    <rect class="day" x="832" y="16" width="12" height="12" fill="#0e4429" style="animation-delay: 2.370s;" />
   </g>
 </svg>
